@@ -105,7 +105,6 @@ fn setup(
     // that is controlled by PanOrbitCamera.
     let pan_orbit_id = commands
         .spawn((
-            Camera3d::default(),
             Camera {
                 // render before the "main pass" camera
                 clear_color: ClearColorConfig::Custom(Color::WHITE),
@@ -140,7 +139,6 @@ fn setup(
 
     // The main pass camera.
     commands.spawn((
-        Camera3d::default(),
         Transform::from_xyz(0.0, 0.0, 15.0).looking_at(Vec3::ZERO, Vec3::Y),
     ));
 
